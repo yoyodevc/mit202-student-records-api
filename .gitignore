@@ -21,3 +21,19 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+# Local Codex and build output
+/.codex-finalizer/
+/tmp/
+**/node_modules/
+/docs/build/
+/docs/build/report-preview/
+/docs/build/cheat-sheet-render*/
+/docs/build/*.png
+/docs/build/*.layout.json
+/docs/build/*.pdf
+/docs/output/*.preview.pdf
+/docs/output/MIT202_Lab_01_Presentation.pptx
+/docs/output/MIT202_Lab_01_Presentation_v2.pptx
+/docs/output/MIT202_Lab_01_Presentation_v3.pptx
+/docs/output/MIT202_Lab_01_Presentation_Cheat_Sheet.docx

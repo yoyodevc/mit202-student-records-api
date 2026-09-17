@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 54px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 25px Arial, sans-serif; fill: #475569; }
+      .label { font: 700 30px Arial, sans-serif; fill: #0f172a; }
+      .small { font: 400 22px Arial, sans-serif; fill: #334155; }
+      .tiny { font: 400 19px Arial, sans-serif; fill: #475569; }
+      .box { stroke-width: 3; rx: 24; }
+      .arrow { stroke: #334155; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+      .inner-arrow { stroke: #64748b; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#f8fafc"/>
+  <text x="800" y="78" text-anchor="middle" class="title">Student Records API Architecture</text>
+  <text x="800" y="120" text-anchor="middle" class="subtitle">One API, two database targets, selected by .env</text>
+
+  <rect x="70" y="335" width="285" height="190" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+  <text x="212" y="400" text-anchor="middle" class="label">Postman Client</text>
+  <text x="212" y="445" text-anchor="middle" class="small">GET /api/students</text>
+  <text x="212" y="483" text-anchor="middle" class="small">POST /api/students</text>
+
+  <rect x="430" y="210" width="530" height="445" class="box" fill="#eef2ff" stroke="#4f46e5"/>
+  <text x="695" y="270" text-anchor="middle" class="label">Laravel 11 API Layer</text>
+  <rect x="480" y="305" width="430" height="66" rx="14" fill="#ffffff" stroke="#818cf8" stroke-width="2"/>
+  <text x="695" y="347" text-anchor="middle" class="small">routes/api.php</text>
+  <rect x="480" y="415" width="430" height="66" rx="14" fill="#ffffff" stroke="#818cf8" stroke-width="2"/>
+  <text x="695" y="457" text-anchor="middle" class="small">StudentController</text>
+  <rect x="480" y="525" width="430" height="66" rx="14" fill="#ffffff" stroke="#818cf8" stroke-width="2"/>
+  <text x="695" y="567" text-anchor="middle" class="small">Student Eloquent Model</text>
+
+  <rect x="1220" y="170" width="320" height="195" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <text x="1380" y="235" text-anchor="middle" class="label">Option A: MySQL</text>
+  <text x="1380" y="282" text-anchor="middle" class="small">student_records</text>
+  <text x="1380" y="320" text-anchor="middle" class="tiny">Local XAMPP MariaDB</text>
+
+  <rect x="1220" y="635" width="320" height="195" class="box" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="1380" y="700" text-anchor="middle" class="label">Option B: Supabase</text>
+  <text x="1380" y="747" text-anchor="middle" class="small">PostgreSQL</text>
+  <text x="1380" y="785" text-anchor="middle" class="tiny">Managed cloud database</text>
+
+  <rect x="980" y="485" width="200" height="145" rx="20" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+  <text x="1080" y="533" text-anchor="middle" class="label">.env setting</text>
+  <text x="1080" y="572" text-anchor="middle" class="small">DB_CONNECTION</text>
+  <text x="1080" y="604" text-anchor="middle" class="tiny">choose one target</text>
+
+  <!-- Every connector stops before the next box. -->
+  <path d="M 355 430 L 430 430" class="arrow"/>
+  <text x="387" y="410" text-anchor="middle" class="tiny">HTTP JSON</text>
+
+  <path d="M 695 371 L 695 415" class="inner-arrow"/>
+  <path d="M 695 481 L 695 525" class="inner-arrow"/>
+
+  <path d="M 910 558 L 980 558" class="arrow"/>
+
+  <path d="M 1080 485 L 1080 268 L 1220 268" class="arrow"/>
+  <path d="M 1080 630 L 1080 732 L 1220 732" class="arrow"/>
+
+  <text x="800" y="875" text-anchor="middle" class="subtitle">Change DB_CONNECTION only. Routes, controller, and model stay the same.</text>
+</svg>
